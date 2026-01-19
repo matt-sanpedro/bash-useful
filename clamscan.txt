@@ -1,0 +1,4 @@
+# View and log simultaneously: The tee command allows the output to be displayed 
+# on the screen and written to a file (clamscan.log in this example) at the same time.
+# the -i flag will log only infected files
+clamscan -r -i /path/to/scan | tee clamscan.log

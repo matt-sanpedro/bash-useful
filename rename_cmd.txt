@@ -1,0 +1,2 @@
+rename multiple files in current directory for files ending in ".mkv":
+rename -v 's/Daredevil.Born.Again./Daredevil Born Again /' *.mkv

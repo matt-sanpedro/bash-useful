@@ -1,0 +1,6 @@
+scan for local devices in network:
+nmap -sP 192.168.1.0/24
+
+log into the local server:
+ssh msanpedro@192.168.1.14 -p 18922
+
