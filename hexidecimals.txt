@@ -1,0 +1,7 @@
+# View a file in canonical format: This displays the input offset, 
+# the hexadecimal bytes, and the corresponding ASCII characters side-by-side.
+hexdump -C filename
+
+# Using printf to generate the character and then hexdump -C to view it
+# printf can generate the actual character from the hex code, which you then pipe to hexdump
+printf '\x0a' | hexdump -c
