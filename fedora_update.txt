@@ -1,0 +1,6 @@
+# ensure current system is fully updated
+sudo dnf upgrade --refresh
+
+# trigger system upgrade and reboot
+sudo dnf system-upgrade reboot
+
