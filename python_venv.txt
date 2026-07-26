@@ -1,0 +1,20 @@
+# how to set up a python virtual environment (venv)
+
+# installing on Ubuntu
+sudo apt update && sudo apt install python3-venv
+
+# installing on Fedora
+sudo dnf install python3-virtualenv
+
+# create the virtual environment
+python3 -m venv .venv
+
+example:
+python3 -m venv qenv
+
+# output the requirements.txt file
+pip freeze > requirements.txt
+
+# install dependencies through the requirements.txt file
+pip install -r requirements.txt
+
