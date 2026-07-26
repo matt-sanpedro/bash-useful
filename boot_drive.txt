@@ -1,0 +1,22 @@
+# identify the USB drive
+lsblk
+
+# unmount the USB drive
+sudo umount /dev/sdX*
+
+example:
+sudo umount /dev/sda
+
+# flash ISO to the USB drive
+sudo dd bs=4M if=/path/to/your/image.iso of=/dev/sdX status=progress oflag=sync
+
+example:
+sudo dd bs=4M if=/home/mobius/os/Fedora-Workstation-Live-44-1.7.x86_64.iso of=/dev/sda status=progress oflag=sync
+
+# flush remaining cache and eject
+sync
+sudo eject /dev/sdX
+
+example:
+sudo eject /dev/sda
+
