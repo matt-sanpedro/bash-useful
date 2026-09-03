@@ -1,3 +1,10 @@
-rename multiple files in current directory for files ending in ".mkv":
+# rename multiple files in current directory for files ending in ".mkv":
 rename -v 's/Daredevil.Born.Again./Daredevil Born Again /' *.mkv
 rename -v 's/\(2007\) - S/- s/' *.mkv
+
+# batch process multiple files
+for file in *" (2023) - "*; do
+    new_name=$(echo "$file" | sed -E 's/^([^[:space:]]+) \([0-9]{4}\) - (S[0-9]{2}E[0-9]{2}) - .*/\1 - \2.mkv/')
+    new_name=$(echo "$new_name" | sed 's/S0/s0/; s/E0/e0/') # Lowercases S02E01
+    mv "$file" "$new_name"
+done
