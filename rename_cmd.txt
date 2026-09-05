@@ -8,3 +8,6 @@ for file in *" (2023) - "*; do
     new_name=$(echo "$new_name" | sed 's/S0/s0/; s/E0/e0/') # Lowercases S02E01
     mv "$file" "$new_name"
 done
+
+$ batch process multiple files
+rename -n 's/^([^.]+)\.(S\d+E\d+)\..*\.(\w+)$/$1 - \L$2.$3/' *.mkv
