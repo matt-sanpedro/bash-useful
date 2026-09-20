@@ -1,0 +1,6 @@
+# install yt-dlp in Fedora
+sudo dnf install yt-dlp
+
+# explicitly download highest quality video/audio
+yt-dlp -f "bv*+ba/b" "VIDEO_URL"
+
